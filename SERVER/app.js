@@ -8,10 +8,10 @@ const app = express();
 
 
 const parcelsRoutes = require('./api/v1/routes/parcels');
-//const orderRoutes = require('./api/routes/order');
+const orderRoutes = require('./api/v1/routes/orders');
 
 app.use('/parcels', parcelsRoutes);
-//app.use('/order', orderRoutes);
+app.use('/orders', orderRoutes);
 
 
 
