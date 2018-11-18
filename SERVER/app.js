@@ -20,6 +20,26 @@ app.use(bodyParser.urlencoded({extended: false }));
 app.use(bodyParser.json());
 
 
+//appending the incoming request from Cors
+app.use((req, res, next) =>{
+   res.header('Access-Control-Allow-Origin', '*');
+   //ALSO let's append this headers cors to handle the incoming request
+   res.header('Access-Control-Allow-Origin', 'origin, x-Requested-Width, Content-Type, Accept, Authorization');
+ 
+ //check if the incoming request method(property which gives us the access to the http method used on the request) equals to options, browser will always send an option request first when you usedn a post request or a patch request this you can't avoid 
+  if(req.method === 'OPTIONS'){
+
+    //addition of header where i tell the browser what to send
+       
+        res.header('Access-Control-Allow-Methods','PUT, POST, PATCH, DELETE, GET'); 
+        return res.status(200).json({});
+
+
+  }
+     next();
+});
+
+
 //Routes which should handle requests
 app.use('/parcels', parcelsRoutes);
 app.use('/orders', orderRoutes);
