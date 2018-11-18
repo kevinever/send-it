@@ -8,13 +8,19 @@ const app = express();
 //to display the output on our console 
 const morgan = require('morgan');
 
+//now we need a bodyparser to deal with our incoming request and from there we can then reuse our that data n.b:bp doesn't accept files
 
+const bodyParser = require('body-parser');
 
 const parcelsRoutes = require('./api/v1/routes/parcels');
 const orderRoutes = require('./api/v1/routes/orders');
 
 app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false }));
+app.use(bodyParser.json());
 
+
+//Routes which should handle requests
 app.use('/parcels', parcelsRoutes);
 app.use('/orders', orderRoutes);
 
