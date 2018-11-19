@@ -21,12 +21,6 @@ router.get('/', (req, res, next) => {
 
 
 
-
-
-
-
-
-
       
         ConsignmentNo: '10',
             
@@ -63,11 +57,28 @@ router.get('/', (req, res, next) => {
     });
 });
 
+
+
+
+
+
+
 router.post('/', (req, res, next) => {
     const parcel ={
-        id: req.body.id,
+        ConsignmentNo: req.body.ConsignmentNo,
+        Origin: req.body.Origin,
+        Destination: req.body.Destination,
         Shippername: req.body.Shippername,
-        price: req.body.price
+        receivername: req.body.receivername,
+        Receiverphone: req.body.Receiverphone,
+        weight: req.body.weight,
+        Qnty: req.body.Qnty,
+        Bookingmode: req.body.Bookingmode,
+        Packupdate: req.body.Packupdate,
+        Pickuptime: req.body.Pickuptime,
+        Comments: req.body.Comments
+       // Shiptype req.body.Shiptype
+       
     };
     res.status(201).json({
         message: 'Handling POST requests to /parcels',
