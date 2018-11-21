@@ -1,4 +1,4 @@
-# SEND-IT
+# SEND-IT  [![Build Status](https://travis-ci.com/kevinever/send-it.svg?branch=master)](https://travis-ci.com/kevinever/send-it)
 
 ## Parcel Management System
 
