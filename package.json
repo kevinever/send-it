@@ -1,9 +1,14 @@
 {
+  "engines": {
+    "node": "11.2.0"
+  },
   "scripts": {
-    "start": "node ./SERVER/server.js",
+    "start": "node --require babel-core/register --require babel-polyfill ./SERVER/server.js",
     "devstart": "nodemon --exec babel-node  ./SERVER/server.js"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mocha": "^5.2.0",
