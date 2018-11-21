@@ -16,11 +16,14 @@ sendit a courier service that helps users deliver parcels to different destinati
 
 ---
 --- 
-**Screen-shot**
- ****fetch parcels by id****
+## Screen-shot
+ 
  ![adding](https://user-images.githubusercontent.com/15107339/48858240-8a548280-edc3-11e8-83a4-ad391e5eb422.png)
  
- ****fetch all parcels ****
+ 
+![byid](https://user-images.githubusercontent.com/15107339/48858709-ba505580-edc4-11e8-9dc7-b722f7837e6a.png)
+
+![capture](https://user-images.githubusercontent.com/15107339/48858731-c6d4ae00-edc4-11e8-960c-128a8ae0472f.PNG)
 
 ---
 ---
