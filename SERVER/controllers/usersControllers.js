@@ -3,12 +3,12 @@ import uuid from 'uuid';
 
 const userController={
     create(req,res){
-        const{ origin, destination, weight }=req.body;
+        const{ usename, email }=req.body;
         const newuser={
             id:(users.length+1).toString(),
             userId:uuid.v4(),
-            usename:"kevin-ever",
-        email:"kevinever@lastking.alive",
+            usename,
+        email,
         }
     users.push(newuser);
     return res.status(201).send(newuser);
