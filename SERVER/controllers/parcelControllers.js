@@ -1,11 +1,12 @@
 import parcels from '../data/parcelData';
+import uuid from 'uuid';
 
 const parcelController={
     create(req,res){
-        const{ origin,destination,weight }=req.body;
+        const{ origin, destination, weight }=req.body;
         const newParcel={
             id:(parcels.length+1).toString(),
-            userId:"23",
+            userId:uuid.v4(),
             origin,
             destination,
             weight,

@@ -25,10 +25,11 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use('/api/v1/parcels', parcelRoutes);
-app.use('/api/v1/users',userRoutes);
+app.use('/api/v1/users', userRoutes);
 //const app = require('');
 
 const port = process.env.PORT || 3000;
+console.log('port 3000 is listening ');
 //const server = http.createServer(app);
 app.listen(port);
 
