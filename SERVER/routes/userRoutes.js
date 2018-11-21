@@ -1,13 +1,13 @@
 import express from 'express';
-import parcelControllers from '../controllers/parcelControllers';
+import usersControllers from '../controllers/usersControllers';
 
 const router=express.Router();
 
-router.get('/:userId/parcels',parcelControllers.getParcelsOfUser);
-router.post('/',parcelControllers.create);
-router.get('/',parcelControllers.getParcels);
-router.get('/:id',parcelControllers.getParcelById);
-router.put('/:id/cancel',parcelControllers.cancelParcel);
+router.get('/:userId/users',parcelControllers.getParcelsOfUser);
+router.post('/',usersControllers.create);
+router.get('/',usersControllers.getParcels);
+router.get('/:id',usersControllers.getParcelById);
+router.put('/:id/cancel',usersControllers.cancelParcel);
 
 
 export default router;
