@@ -10,7 +10,7 @@ const parcelController={
             destination,
             weight,
             createdDate:new Date(),
-            status:"pending"
+            status:"pending",
         }
     parcels.push(newParcel);
     return res.status(201).send(newParcel);
@@ -29,6 +29,11 @@ const parcelController={
         const index=parcels.indexOf(oneParcel);
         parcels[index].status="canceled";
         return res.status(201).send(parcels[index]);
+    },
+    getParcelsOfUser(req,res){
+     const userId=req.params.userId
+     const allParcels=parcels.filter(parcel=>parcel.userId===userId);
+     return res.status(200).send(allParcels);
     }
 }
 export default parcelController;

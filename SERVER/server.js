@@ -9,13 +9,27 @@
 
 //http is a node server module that helps us to create our own server
 //we need then to import it by using require
-const http = require('http');
+import express from "express";
+import bodyParser from 'body-parser';
+import parcelRoutes from './routes/parcelRoutes';
+import userRoutes from './routes/userRoutes'
+import path from 'path';
+import logger from 'morgan';
 
-const app = require('./app');
+//const express = require('express');
+const app = express();
 
-const port = process.env.PORT || 811;
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use('/api/v1/parcels', parcelRoutes);
+app.use('/api/v1/users',userRoutes);
+//const app = require('');
 
-const server = http.createServer(app);
+const port = process.env.PORT || 3000;
+//const server = http.createServer(app);
+app.listen(port);
 
-server.listen(port);
-console.log('server is listening on port 811');
+export default app;

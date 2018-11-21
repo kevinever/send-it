@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "node ./SERVER/server.js",
+    "devstart": "nodemon --exec babel-node  ./SERVER/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.6",
+    "uuid": "^3.3.2"
+  }
+}

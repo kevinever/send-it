@@ -1,5 +1,5 @@
 
-//importing express framework to help in data structure 
+//importing express framework to help in storing data structure 
 const express = require('express');
 
 //assigning express to an app variable 
@@ -12,18 +12,18 @@ const morgan = require('morgan');
 
 const bodyParser = require('body-parser');
 
-const parcelsRoutes = require('./api/v1/routes/parcels');
-const orderRoutes = require('./api/v1/routes/orders');
+const parcelsRoutes = require('./api/v1/controllers/parcels');
+//onst orderRoutes = require('./api/v1/routes/orders');
+//const usersRoutes = require('./api/v1/routes/users');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false }));
 app.use(bodyParser.json());
 
-
 //appending the incoming request from Cors
 app.use((req, res, next) =>{
    res.header('Access-Control-Allow-Origin', '*');
-   //ALSO let's append this headers cors to handle the incoming request
+   //ALSO let's append this headers cors to handle other incoming request
    res.header('Access-Control-Allow-Origin', 'origin, x-Requested-Width, Content-Type, Accept, Authorization');
  
  //check if the incoming request method(property which gives us the access to the http method used on the request) equals to options, browser will always send an option request first when you usedn a post request or a patch request this you can't avoid 
@@ -42,7 +42,8 @@ app.use((req, res, next) =>{
 
 //Routes which should handle requests
 app.use('/parcels', parcelsRoutes);
-app.use('/orders', orderRoutes);
+//app.use('/orders', orderRoutes);
+//app.use('/users', usersRoutes);
 
 app.use((req, res, next) =>{
    const error = new Error('not found');
