@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet">
+<script src="js/js.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1 style="text-align:center">Send it parcel management system</h1>
+</div>
+<ul class="topnav">
+  <li><a  href="index.html">Home</a></li>
+  <li><a class="active" href="#" target="_top">Check Shipping</a></li>
+  <li><a  href="deliverystatus.html">Delivery Status</a></li>
+  <li ><a href="#about">About</a></li>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">Members</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>    </div>
+  </li>
+</ul>
+<aside id="shady">
+   <fieldset><legend ><strong>Form Order Bucket</strong></legend> 
+      <form method="POST" action=""  name="sendit">
+<table width=100%>
+
+<tr>
+<td>Origins</td>
+<td>:</td>
+<td> <input id="origins" type="text" placeholder="Origins" class="validate" name="name"></td>
+</tr>
+
+<tr>
+<td>Destinations</td>
+<td>:</td>
+<td> <input name="destinations" id="destinations" placeholder="Destinations" type="text" class="validate"></td>
+</tr>
+
+
+
+
+<tr>
+<td>Weight (Kg) Ex: 0.2, 2, 20</td>
+<td>:</td>
+<td><input type="text" name="weight"></td>
+</tr>
+
+   
+<tr>
+<td>Long (Cm)</td>
+<td>:</td>
+<td><input type="text" name="long"></td>
+</tr>
+
+<tr>
+<td>Wide (Cm)</td>
+<td>:</td>
+<td><input type="text" name="wide"></td>
+</tr>
+
+
+<tr>
+<td>High (Cm)</td>
+<td>:</td>
+<td><input type="text" name="high"></td>
+</tr>
+
+<tr>
+<td>Delivery options</td>
+<td>:</td>
+<td><select name="opt">
+<option value="Sea or Land"> Sea or Land</option>
+<option value="Air"> Air</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Packing</td>
+<td>:</td>
+<td><select name="pack" >
+<option value="No"> No</option>
+<option value="Yes"> Yes</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Option Shipping</td>
+<td>:</td>
+<td><select name="ship" onChange="calculateDistances();">
+<option value="">-- Option Shipping --</option>
+<option value="2">Over Night</option><option value="3">Over Land</option><option value="4">Detain</option><option value="5">Detain</option><option value="6">dslfj</option><option value="7">Phone</option><option value="8">Entrega Basica</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Distance (Km)</td>
+<td>:</td>
+<td> <input id="distance"  type="text" name="dista">  
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><input type="submit" name="submit" onClick="MM_validateForm('name','','R','destinations','','R','weight','','R','long','','R','wide','','R','high','','R','opt','','R','','','ship','dista','','R','submit','R');return document.MM_returnValue" value="Check"></td>
+</tr>
+
+</table><input id="billing" type="hidden" placeholder="Total Tarif">
+  <div id="map"></div>
+</form>
+  </fieldset>  
+  </aside>
+
+
+</body>
+</html>
