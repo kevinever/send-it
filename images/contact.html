@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+#shady{
+background-color: #4CAF50;
+color: black;
+box-shadow: 10px 10px;
+}
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <h1 style="text-align:center">Send it parcel management system</h1>
+</div>
+<ul class="sidenav">
+  <li><a class="active" href="#">Home</a></li>
+  <li><a href="hh.html" target="_top">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="content">
+  <h2>TRACK YOUR DELIVERY</h2><div id="shady">
+  <form method="GET" action="" style="">
+<table border=0 width=50% align=left style="border:0px solid; padding">
+<tr>
+<td>No.Invoice </td><td>:&nbsp;&nbsp;&nbsp;</td><td><input type="text" name="search" size="33"  value="" / style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);"></td>
+</tr>
+<tr>
+<td></td><td></td><td>Ex: 141</td>
+</tr>
+<tr>
+<td></td><td></td><td><input type="submit" name="submit" value="Check"></td>
+</tr>
+</table>
+<input type="hidden" name="pilih" value="" />
+<input type="hidden" name="modul" value="yes" />
+<input type="hidden" name="action" value="cari" />
+
+</form></div><br><br><br><br><br>
+
+  <p class="navi" align="justify"><strong>Parcel Management System  </strong> is the simplest solution for <strong>Parcel &amp; Cargo Tracking</strong> Business. If you need to enable Tracking Option in your existing or new website, this is quickest Software Solution. </p>
+          <p class="navi" align="justify">You can get install it yourselves or  We do the installation and brand it in your name on your hosting ! </p>
+          <p class="navi" align="justify"><blockquote>The Parcel Software is Very 
+easy to setup and manage powerful administration. Provide online 
+tracking system of consignment and shipping detail for International or 
+domestic shipping. </blockquote></p>
+          <p class="navi" align="justify">We have made this script, a very simple one, which means SIMPLE  ! Read More on the Features<strong>.</strong></p>
+          <p class="navi" align="justify"><strong>Our CEO quotes : </strong></p>
+          <p class="navi" align="justify">" We decided to develop this 
+small application for the simple reason being, not many such scripts are
+ available in the market and few of such that exist are vast and 
+complex" </p>
+  <h3>Resize the browser window to see the effect.</h3>
+</div>
+</body>
+</html>

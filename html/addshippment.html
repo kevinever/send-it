@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet">
+<style type="text/css">
+
+.ds_box {
+	background-color: #FFF;
+	border: 1px solid #000;
+	position: absolute;
+	z-index: 32767;
+}
+
+.ds_tbl {
+	background-color: #FFF;
+}
+
+
+.ds_head {
+	background-color: #333;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.ds_subhead {
+	background-color: #CCC;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 32px;
+}
+
+.ds_cell {
+	background-color: #EEE;
+	color: #000;
+	font-size: 13px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.ds_cell:hover {
+	background-color: #F3F3F3;
+} /* This hover code won't work for IE */
+
+</style>
+<link type="text/css" rel="stylesheet" href="css/style.htm">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style> 
+
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #003399;
+}
+-->
+</style>
+<script src="js/js.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1 style="text-align:center">Send it parcel management system</h1>
+</div>
+<ul class="topnav">
+  <li><a  href="index.html">Home</a></li>
+  <li><a  href="checkshipping.html" target="_top">Check Shipping</a></li>
+  <li><a class="active" href="#">Delivery Status</a></li>
+  <li ><a href="#about">About</a></li>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">Members</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>    </div>
+  </li>
+
+</ul>
+ahdajkdhasjdh
+
+<table class="Partext1" cellpadding="2" cellspacing="2" align="center" width="100%">
+          <tbody><tr>
+            <td colspan="3" class="TrackMediumBlue" align="right"><div class="gentxt" align="right">
+                <div class="headtext13" align="left"><strong>Shipper info : </strong></div>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right" width="138">Shipper Name   :</td>
+            <td>&nbsp;</td>
+            <td>
+			<input name="Shippername"  maxlength="100" size="40" type="TEXT">
+                </td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Phone   :</td>
+            <td>&nbsp;</td>
+            <td><input name="Shipperphone" id="Shipperphone" maxlength="13" size="40" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Address   :</td>
+            <td>&nbsp;</td>
+            <td><span class="REDLink">
+              <textarea name="Shipperaddress" cols="27" rows="2" id="Shipperaddress"></textarea>
+              *</span></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="TrackMediumBlue" align="right"><div class="headtext13" align="left"><strong>Receiver  info : </strong></div></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Receiver Name : </td>
+            <td>&nbsp;</td>
+            <td><input name="Receivername" id="Receivername" maxlength="100" size="40" type="TEXT">
+                <span class="REDLink">*</span></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Phone : </td>
+            <td>&nbsp;</td>
+            <td><input name="Receiverphone" id="Receiverphone" maxlength="13" size="40" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right"> Address: : </td>
+            <td>&nbsp;</td>
+            <td><span class="REDLink">
+              <textarea name="Receiveraddress" cols="27" rows="2" id="Receiveraddress"></textarea>
+              *</span></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="TrackMediumBlue" align="right"><div class="headtext13" align="left"><strong>Shipment   info : </strong></div></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Consignment No  : </td>
+            <td width="13">&nbsp;</td>
+            <td width="477"><input name="ConsignmentNo"  value="<?php echo strtoupper($rand); ?>" id="ConsignmentNo"  readonly="true" maxlength="13" size="40"  type="TEXT">
+                <span class="REDLink">*</span> </td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Type of Shipment  :</td>
+            <td>&nbsp;</td>
+            <td><select id="Shiptype" name="Shiptype">
+                <option value="Documents" selected="selected">Documents</option>
+                <option value="Parcel">Parcel</option>
+                <option value="Sentiments">Sentiments</option>
+            </select>
+			</td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Weight : </td>
+            <td>&nbsp;</td>
+            <td><input id="Weight" size="10" maxlength="10" name="Weight">
+              (kg)</td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Invoice no  :</td>
+            <td>&nbsp;</td>
+            <td><input name="Invoiceno" id="Invoiceno" size="40" maxlength="20" onKeyUp="check_phone('Invoiceno')" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Qnty  :</td>
+            <td>&nbsp;</td>
+            <td><input name="Qnty" id="Qnty" maxlength="10" size="20" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Booking Mode :</td>
+            <td>&nbsp;</td>
+            <td><select name="Bookingmode" id="Bookingmode">
+                <option selected="selected" value="Paid">Paid</option>
+                <option value="ToPay">ToPay</option>
+                <option value="TBB">TBB</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Total freight : </td>
+            <td>&nbsp;</td>
+            <td><input id="Totalfreight" size="10" maxlength="13" name="Totalfreight"></td>
+          </tr>
+          <tr>
+            <td class="TrackMediumBlue" align="right">Mode : </td>
+            <td>&nbsp;</td>
+            <td><select name="Mode" id="Mode">
+                <option selected="selected" value="Air">Air</option>
+                <option value="Road">Road</option>
+                <option value="Train">Boat</option>
+				<option value="bus">Bus</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right"><span class="TrackMediumBlue">Dept time : </span></td>
+            <td>&nbsp;</td>
+            <td><input name="Depttime" id="Depttime" maxlength="50" size="20" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right">Destination Office:</td>
+            <td>&nbsp;</td>
+            <td><input name="Destination" id="Destination" maxlength="50" size="40" type="TEXT">
+                <span class="REDLink">*</span> </td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right">Pickup Date  :</td>
+            <td>&nbsp;</td>
+            <td><input name="Packupdate" id="Packupdate" readonly="True" style="cursor: text;" onClick="ds_sh(this);" maxlength="15" type="TEXT">
+                <span class="REDLink">*</span> </td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right" valign="top">Pickup Time  :</td>
+            <td>&nbsp;</td>
+            <td><input name="Pickuptime" id="Pickuptime" maxlength="50" size="20" type="TEXT"></td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right" valign="top">Status :</td>
+            <td>&nbsp;</td>
+            <td><select name="status" id="status">
+                <option selected="selected" value="In Transit">In Transit</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td class="TrackNormalBlue" align="right" valign="top">Comments :</td>
+            <td>&nbsp;</td>
+            <td><textarea name="Comments" cols="40" rows="4" id="Comments"></textarea></td>
+          </tr>
+          <tr>
+            <td align="right">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><input name="Submit" type="submit" onClick="MM_validateForm('Shippername','','R','Shipperphone','','R','Receivername','','R','Receiverphone','','R','ConsignmentNo','','R','Weight','','R','Invoiceno','','R','Qnty','','RisNum','Totalfreight','','R','Pickuptime','','R','Shipperaddress','','R','Comments','','R','Weight','','RisNum','Totalfreight','','R');return document.MM_returnValue" value="Add Courier"></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody></table>
+
+<div class="content">
+  <h3>Resize the browser window to see the effect.</h3>
+</div>
+</body>
+</html>
