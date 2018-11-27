@@ -4,9 +4,10 @@
   "description": "a parcel management system",
   "main": "index.js",
   "scripts": {
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "babel": "babel --presets es2015  -o build/main.bundle.js",
     "start": "node --require babel-core/register --require babel-polyfill server.js",
-    "test": "nyc --require babel-core/register mocha ./test/parcelstest.js --compilers js:babel-core/register --timeout 10000 --exit"
+    "test": "nyc --require babel-core/register mocha --require babel-polyfill ./test/parcelstest.js --compilers js:babel-core/register --timeout 10000 --exit"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
     "dotenv": "^6.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
