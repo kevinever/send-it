@@ -1,12 +1,26 @@
-# SEND-IT  [![Build Status](https://travis-ci.com/kevinever/send-it.svg?branch=master)](https://travis-ci.com/kevinever/send-it)
+# SEND-IT 
+[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it "JavaScript The Good Parts")
+ [![Join the chat at https://gitter.im/{ORG-or-USERNAME}/{REPO-NAME}](https://badges.gitter.im/Join%20Chat.svg)](https://github.com/kevinever/send-it) [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
 
-## Parcel Management System
+## Contributing? pleas feel free [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it)
+  
+## Parcel Management System [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it)
+
 
 *SEND-IT* is a courier service that helps its users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.  parcel Courier Management System parcel Shipment management system prototype for .  Purpose To enable a private delivery service to collect and deliver parcels. The system lets a manager/admin use a Management Dashboard to view, track, assign, and manage a list of all shipments.
 
 ---
+# Node package module installation
 
-**to enable users to :**
+
+[![https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true)](https://github.com/kevinever/send-it)
+
+
+---
+
+---
+
+**It helps users to :**
 
  1. Create a parcel order 
  2. Get all parcels orders
@@ -21,7 +35,7 @@
  4. Get a specific user by userid
  5. delete a parcel order
  
- 4.Cancel or  
+   
 
 ---
 --- 
@@ -113,4 +127,3 @@ Clone or download the repository(parcel), then from the command line, run npm in
 
 
 ## N.B thiss version is still under development some features may not meet some expectations as it is still under development.
-
