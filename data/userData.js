@@ -14,4 +14,4 @@ const users=[
         email:"Rugamba-iteka@lastking.alive",
     }
 ]
-export default users
+export default users;
