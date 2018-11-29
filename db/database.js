@@ -1,17 +1,13 @@
-import { Pool } from 'pg';
-
 //const pool = new Pool();
 
 /*
-* For this this work, I've created a .env file and assigned values
+* For this this work, a pool function
 * to properties like PGHOST, PGPORT, PGUSER, PGPASSWORD, and PGDATABASE
 * I've also installed dotenv and called dotenv.config(); when the
 * server is starting up. dotenv.config(); ensures the properties
 * defined in the .env file are available to the app as it runs
 */
-
-
-
+import { Pool } from 'pg';
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -21,16 +17,14 @@ const pool = new Pool({
 });
 
 const connect = async () => pool.connect();
-
 const execute = async (sql, data = []) => {
   const connection = await connect();
   try {
     return await connection.query(sql, data);
   } catch (error) {
-   return error;
+    return error;
   } finally {
     connection.release();
   }
 };
-
 export default execute;

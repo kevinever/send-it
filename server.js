@@ -3,8 +3,6 @@
 //with the help of  Acedemind tutorial i am going to be able to create my own api endpoint with their help i want to credit them my God bless their work  
 
 
-//this server file will help us to create a listening server if none is available
-//then by default the 911 server will be listening
 
 
 //http is a node server module that helps us to create our own server
@@ -29,25 +27,25 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use('/api/v1/parcels', parcelRoutes);
-app.use('/api/v1/users', userRoutes);
+app.use('/api/v2/parcels', parcelRoutes);
+app.use('/api/v2/users', userRoutes);
 
 
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   const error = new Error('not found');
   error.status = 404;
   next(error);
-})
+});
 
 
-app.use((error, req, res, next) =>{
- res.status(error.status || 500);
- res.json({
-     error:{
-       message: error.message
-     }
- });
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message
+    }
+  });
 });
 
 
@@ -63,6 +61,8 @@ app.use((err, req, res, next) => {
   });
 });
 
+
+//creating parcels table
 execute(`CREATE TABLE IF NOT EXISTS parcels (
   id UUID PRIMARY KEY,
   origin VARCHAR(20),
@@ -70,10 +70,13 @@ execute(`CREATE TABLE IF NOT EXISTS parcels (
   user_id UUID,
   created_date DATE, 
   price INT,
-  present_location VARCHAR(20),
+  presentLocation VARCHAR(20),
   weight INT,
   status VARCHAR(30)
 )`);
+
+//creating users table
+
 execute(`CREATE TABLE IF NOT EXISTS users (
   id UUID PRIMARY KEY,
   firstname VARCHAR(20),
@@ -86,8 +89,8 @@ execute(`CREATE TABLE IF NOT EXISTS users (
 
 //const app = require('');
 
-const port = process.env.PORT || 3000;
-console.log('port 3000 is listening ');
+const port = process.env.PORT || 4570;
+console.log(`port ${port} is listening `);
 //const server = http.createServer(app);
 app.listen(port);
 

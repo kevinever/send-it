@@ -7,6 +7,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "babel": "babel --presets es2015  -o build/main.bundle.js",
     "start": "node --require babel-core/register --require babel-polyfill server.js",
+    "devstart": "nodemon --require babel-core/register --require babel-polyfill server.js",
     "test": "nyc --require babel-core/register mocha --require babel-polyfill ./test/parcelstest.js --compilers js:babel-core/register --timeout 10000 --exit"
   },
   "repository": {
@@ -36,7 +37,10 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-mocha": "^5.2.0",
+    "jwt-simple": "^0.5.5",
+    "nodemon": "^1.18.7",
     "nyc": "^13.1.0",
+    "password-hash": "^1.2.2",
     "pg": "^7.6.1",
     "pool": "^0.4.1",
     "uuid": "^3.3.2"

@@ -1,67 +1,70 @@
 
-//we are gong to create our controllers to of our app to run from
-//importing users from our data dummies arrays
-
-//import users from '../data/userData';
-
-//id will be generated automatically as identifier of our users
 import uuid from 'uuid';
+import protection from '../helpers/authentication';
+import execute from '../db/database';
+import passwordHash from 'password-hash';
 
 
-//declaration of our controller that will help to CRUD as we want our created users
+const create = async (req, res) => {
+    const { firstname, lastname, email, password, role } = req.body;
+    let validInput = /^[\w ]+$/;
+    let harshedPassword = passwordHash.generate(password);
+    let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-//creating a usercontroler variable  that will be used in CRUD
-const userController={
-    create(req, res){
-        const{ usename, email }=req.body;
-        const newuser={
-            id:(users.length+1).toString(),
-            userId:uuid.v4(),
-            usename,
+    let user = {
+        firstname,
+        lastname,
         email,
-        }
-    
-
-         //insert as many users we want and return a message with new resource  in our temporary database
-    users.push(newuser);
-    return res.status(201).send(newuser);
-    },
-
-//fetch all parcels from our dummie databases
-
-    getusers(req,res){
-        return res.status(200).send(users);
-    },
-
-
-    
-    //fetch parcel by id condition
-
-    getuserById(req, res){
-        const id=req.params.id;
-        const oneuser=users.find(user => user.id===id);
-        return res.status(200).send(oneuser);
-    },
-
-//we are going to then to allow to cancel our created parcel 
-     //and again return changed status
-    canceluser(req, res){
-        const id=req.params.id;
-        const oneuser=users.find(user => user.id===id);
-        const index=users.indexOf(oneuser);
-        users[index].status="canceled";
-        return res.status(201).send(users[index]);
-    },
-
-
-    //now we need to fetch parcels by userId
-    getusersOfUser(req, res){
-     const userId=req.params.userId
-     const allusers=users.filter(user=>user.userId===userId);
-     return res.status(200).send(allusers);
+        password,
+        role
     }
-}
+    if (!validInput.test(firstname)) {
+        res.send("pleas enter first name");
+        return;
+
+    } else if (!validInput.test(lastname)) {
+        res.send("pleas provide valid lastname");
+        return;
+    }
+    else if (!validEmail.test(email)) {
+        res.send("pleas enter valid email");
+
+    } else {
+
+        let token = protection.encodeToken(user);
+        const { rows } = await execute(`INSERT INTO users
+        VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *`, [uuid.v4(), firstname, lastname, email, new Date(), harshedPassword, role])
+        return res.status(201).send({ user: rows[0], token });
+    }
+};
+
+let login = async (req, res) => {
+    const { email, password } = req.body;
+    if (email && password) {
+        const { rows } = await execute(`SELECT firstname, lastname, email FROM users WHERE email = $1`, [email]);
+        if (rows.length > 0) {
+            return res.status(200).send(rows);
+        }
+        else {
+            return res.send('Sorry your username or password is incorrect');
+        }
+        console.log('loged in successfully');
+    }
+    else {
+        return res.status(400).send('Please enter your password and email');
+    }
+};
 
 
+let logout = async (req, res) => {
+    const { email, password } = req.body;
+    const { rows } = await execute(`SELECT * FROM users WHERE email = $1`, [email]);
+    return res.status(200).send(rows);
+    console.log('loged out successfully');
+};
+let getusers = async (req, res) => {
+    const { rows } = await execute(`SELECT * FROM users`);
+    return res.status(200).send(rows);
+};
 
-export default userController;
+export default { create, getusers, login };
