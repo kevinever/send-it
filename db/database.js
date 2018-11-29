@@ -20,8 +20,6 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
 });
 
-
-
 const connect = async () => pool.connect();
 
 const execute = async (sql, data = []) => {
