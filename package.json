@@ -8,7 +8,7 @@
     "babel": "babel --presets es2015  -o build/main.bundle.js",
     "start": "node --require babel-core/register --require babel-polyfill server.js",
     "devstart": "nodemon --require babel-core/register --require babel-polyfill server.js",
-    "test": "nyc --require babel-core/register mocha --require babel-polyfill ./test/parcelstest.js --compilers js:babel-core/register --timeout 10000 --exit"
+    "test": "nyc --require babel-core/register mocha --require babel-polyfill ./test/parcelstest --compilers js:babel-core/register --timeout 10000 --exit"
   },
   "repository": {
     "type": "git",
