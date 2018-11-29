@@ -1,4 +1,4 @@
-# SEND-IT 
+# SEND-IT  [![Build Status](https://travis-ci.com/kevinever/send-it.svg?branch=master)](https://travis-ci.com/kevinever/send-it)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it "JavaScript The Good Parts")
  [![Join the chat at https://gitter.im/{ORG-or-USERNAME}/{REPO-NAME}](https://badges.gitter.im/Join%20Chat.svg)](https://github.com/kevinever/send-it) [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
 
