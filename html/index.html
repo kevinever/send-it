@@ -7,7 +7,10 @@
 <meta name="HandheldFriendly" content="true">
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <link href="../css/slider.css" rel="stylesheet" type="text/css">
+<link href="../css/footer-basic-centered.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<!--<link href="../css/nav.css" rel="stylesheet" type="text/css"> -->
+<script src="../css/nav.js"></script>
 <script src="../js/modal.js"></script>
    <script type="text/javascript">
    	
@@ -48,7 +51,7 @@
 <body>
   
 <!--  <div id="container">-->
-    <div id="header">Follow us on :<a href="#"><img src="../images/download.png" width="20"></a><a href="#"> <img src="../images/facebook.png" width="20"></a><a href="#"> <img src="../images/instagram.jpg" width="20"></a><a href="#"> <img src="../images/snap.png" width="20"> </a> <span id="call">Call Now:+250786746170</span><img src="../images/phone.png" width="20"></div>
+    <div id="header">Follow us on :<a href="#"><img src="../images/download.png" width="20"></a><a href="#"> <img src="../images/facebook.png" width="20"></a><a href="#"> <img src="../images/instagram.jpg" width="20"></a><a href="#"> <img src="../images/snap.png" width="20"> </a> <img src="../images/phone.png" width="20"></div>
   
   
  <div class="header">
@@ -57,16 +60,42 @@
 
   
 	 <div class="navbar" id='nav'>
-
+<!--
+  <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="../../../../boat.jpg" class="logo">logo</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Products</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Blog</a>
+            </li>
+        </ul>
+    </nav>
   
+  
+  -->
   
  
   <ul class="topnav">
  
   <li><a class="active" href="#">Home</a></li>
-  <li><a href="checkshipping.html" target="_top">Check Shipping</a></li>
-  <li><a href="deliverystatus.html">Delivery Status</a></li>
+
+ <!-- <li><a href="deliverystatus.html">Delivery Status</a></li>-->
   <li ><a href="#about">About</a></li>
+    <li><a href="#contact" target="_top">Contact Us</a></li>
   <li class="dropdown" style="float:right">
     <a href="javascript:void(0)" class="dropbtn">Members Area</a>
     <div class="dropdown-content">
@@ -214,24 +243,23 @@ class="close" title="Close Modal">&times;</span>
   <!-- Modal Content -->
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="../images/img_avatar2.png" width="2%" height="2%" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
+      <input type="text" placeholder="" name="uname" required>
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="" name="psw" required>
 
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
+	   <div class="container" style="background-color:#f1f1f1">
       <button type="button" onClick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>    </div>
+      <span class="psw">Forgot <a href="#">password?</a></span> </div>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me  </label>
+    </div>
+   
   </form>
 </div>
 
@@ -243,13 +271,18 @@ class="close" title="Close Modal">&times;</span>
   <div id="shady">
   <form method="GET" action="" style="">
   <div class="track" >
-  <fieldset ><legend>Delivery Status</legend>
+  <fieldset ><legend>Our operating Area</legend>
 <table border=0 width=50% align=left style="border:0px solid; padding">
-<tr>
-<td>No.Invoice </td><td>:&nbsp;&nbsp;&nbsp;</td><td><!--<input type="text" name="search" size="33"  value=""style="box-shadow:10px 10px green;" required>--> <input type="text" name="search" placeholder="Track.." required>  <input type="submit" name="submit2" value="Check" > <img src="../images/trackit.jpg" width="68" height="48" class="ima"><tr><td>Ex: 141 </td><td>    </td>
+<tr><p>
+Video of our hub
+<a href="../../../../../Downloads/Introducing The Biggest Parcel Hub in the UK!.mp4" target="_blank">Big Parcel Hub</a>.
+</p></tr>
+
+<!--<tr>
+<td>No.Invoice </td><td>:&nbsp;&nbsp;&nbsp;</td><td><!--<input type="text" name="search" size="33"  value=""style="box-shadow:10px 10px green;" required> <input type="text" name="search" placeholder="Track.." required>  <input type="submit" name="submit2" value="Check" > <img src="../images/trackit.jpg" width="68" height="48" class="ima"><tr><td>Ex: 141 </td><td>    </td>
 </tr>
-</tr>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2041615.4579980667!2d28.758928054081416!3d-1.9405376567985668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29654e73840e3%3A0x7490b026cbcca103!2sRwanda!5e0!3m2!1sen!2srw!4v1543171606104" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</tr>-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2041615.4579980667!2d28.758928054081416!3d-1.9405376567985668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29654e73840e3%3A0x7490b026cbcca103!2sRwanda!5e0!3m2!1sen!2srw!4v1543171606104" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 </table>
   </fieldset>
   </form></div><br><br><br><br><br>
@@ -289,13 +322,27 @@ With cheaper shipping rates and free software, Parcelhub has taken the cost and 
 <img src="../images/parcelhub.jpg">
 </div>
 
-<footer class="footer">
-</div>
-<address>
-Author:Nyayiha Kevin
-Email:nyayihakevin@gmail.com
-Tel:0786746170
-</address>
-</footer>
+<footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">The company motto.</p>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+
+			<p class="footer-company-name">Company Name &copy; 2018</p>
+
+		</footer>
+
 </body>
 </html>
