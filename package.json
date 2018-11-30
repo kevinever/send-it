@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a parcel management system",
   "main": "index.js",
+  "engines": {
+    "node": "11.2.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "babel": "babel --presets es2015  -o build/main.bundle.js",
