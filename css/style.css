@@ -584,7 +584,7 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(79, 196, 153, 0.54);
+  background-color:#95a5a6;
   padding-top: 50px;
 }
 
