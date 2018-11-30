@@ -1,10 +1,6 @@
-# SEND-IT  [![Build Status](https://travis-ci.com/kevinever/send-it.svg?branch=master)](https://travis-ci.com/kevinever/send-it)
-[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it "JavaScript The Good Parts")
- [![Join the chat at https://gitter.im/{ORG-or-USERNAME}/{REPO-NAME}](https://badges.gitter.im/Join%20Chat.svg)](https://github.com/kevinever/send-it) [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
-
-## Contributing? pleas feel free [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it)
+# SEND-IT  
   
-## Parcel Management System [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/kevinever/send-it)
+## Parcel Management System 
 
 
 *SEND-IT* is a courier service that helps its users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.  parcel Courier Management System parcel Shipment management system prototype for .  Purpose To enable a private delivery service to collect and deliver parcels. The system lets a manager/admin use a Management Dashboard to view, track, assign, and manage a list of all shipments.
@@ -13,7 +9,7 @@
 # Node package module installation
 
 
-[![https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true)](https://github.com/kevinever/send-it)
+[![https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/YOUR-MODULE-NAME.png?downloads=true&downloadRank=true&stars=true)](https:nodejs.org)
 
 
 ---
