@@ -3,6 +3,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="../css/global.css">
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </head>
 
 <body>
@@ -15,7 +26,7 @@
    <div class="sidebar">
          <ul id="nav">
 		    <li><a class="selected" href="#">Dashboard</a></li>
-			<li><a href="#">Create parcel</a></li>
+			<li><button onclick="document.getElementById('id01').style.display='block'">Add Parcel</button></li>
 			<li><a href="#">Search & Edit</a></li>
 			<li><a href="#">List shipment</a></li>
 			<li><a href="#">Delivered</a></li>
@@ -37,6 +48,55 @@
 		</div>
 	 </div>
 
+</div>
+
+
+<!-- Button to open the modal -->
+
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Create parcel</h1>
+      <p>Please fill in this form to create a parcel delivery.</p>
+      <hr>
+      <label for="email"><b>Shipper info</b></label>
+      <input name="Shippername"  maxlength="100" size="40" type="TEXT" name="email" required>
+
+      <label for="psw"><b>Address</b></label>
+      <input type="password" placeholder="" name="psw" required>
+
+      <label for="psw-repeat"><b>Receiver Info</b></label>
+      <input type="text" placeholder="" name="psw-repeat" required>
+	  
+	   <label for="psw-repeat"><b>Address</b></label>
+      <input type="text" placeholder="" name="psw-repeat" required>
+	  
+	   <label for="psw-repeat"><b>Consignment No</b></label>
+      <input type="text" placeholder="" name="psw-repeat" required>
+	  
+	  <label for="psw-repeat"><b>Weight</b></label>
+      <input type="text" placeholder="" name="psw-repeat" required>
+
+      <label>
+        <select>
+  <option value="volvo">pending</option>
+  <option value="saab">delivered</option>
+  <option value="mercedes">Canceled</option>
+  <option value="audi">delete</option>
+</select>
+      </label>
+
+      <p>By creating an order you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup">Place order</button>
+      </div>
+    </div>
+  </form>
 </div>
 
 </body>
